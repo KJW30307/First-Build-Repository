@@ -2,7 +2,7 @@
 
 //Open Alexa
 
-
+var Alexa = require("alexa-sdk");
 
 //Recieve message "Hello Alexa, this is Melissa or Alma"
 
@@ -12,7 +12,11 @@
 
 //Respond with "Hello Melissa/Alma"
 
-
+var Handlers ={
+  "HelloIntent": function () {
+    this.response.speak("Hello, Melissa"); 
+    this.emit(':responseReady');
+};
 
 
 //Open Function to give local weather for the day
@@ -27,4 +31,4 @@
 
 //Respond with appointments on calendar 
 
-//End by saying "Have a lovely day"
+//End by saying "Enjoy your day"
